@@ -37,10 +37,6 @@ class Hashtable {
   }
 }
 
-const ht = new Hashtable();
-
-ht.add("Canada", 300);
-ht.add("Germany", 100);
-ht.add("Italy", 50);
-
-console.log(ht.search("Italy"));
+module.exports = {
+  Hashtable,
+};
