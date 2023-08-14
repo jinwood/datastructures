@@ -31,8 +31,8 @@ class SinglyLinkedList {
   pop() {
     if (!this.head) return undefined;
 
-    const current = this.head;
-    const newTail = current;
+    let current = this.head;
+    let newTail = current;
 
     while (current.next) {
       newTail = current;
