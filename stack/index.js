@@ -41,8 +41,6 @@ class Stack {
   }
 }
 
-const stack = new Stack();
-stack.push("value1");
-stack.push("value2");
-stack.push("value3");
-stack.push("value4");
+module.exports = {
+  Stack,
+};
