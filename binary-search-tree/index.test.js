@@ -50,7 +50,6 @@ describe("binary-search-tree", () => {
 
   it("should insert child nodes", () => {
     const bst = new BinarySearchTree();
-
     bst.insert(100);
     bst.insert(90);
     bst.insert(80);
@@ -80,5 +79,29 @@ describe("binary-search-tree", () => {
         },
       },
     });
+  });
+
+  it("should find a given node", () => {
+    const bst = new BinarySearchTree();
+
+    bst.insert(100);
+    bst.insert(90);
+    bst.insert(80);
+    bst.insert(70);
+    bst.insert(110);
+    bst.insert(150);
+    bst.insert(140);
+
+    const find1 = bst.find(80);
+    const find2 = bst.find(70);
+    const find3 = bst.find(140);
+
+    expect(find1).toEqual({
+      left: { left: null, right: null, value: 70 },
+      right: null,
+      value: 80,
+    });
+    expect(find2).toEqual({ left: null, right: null, value: 70 });
+    expect(find3).toEqual({ left: null, right: null, value: 140 });
   });
 });
